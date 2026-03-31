@@ -218,6 +218,13 @@ $green: #00bc8f;
   }
 }
 
+@keyframes slideBurgerMenu {
+  0% {
+  }
+  100% {
+  }
+}
+
 //#endregion
 
 //#region responsivnes
@@ -239,6 +246,22 @@ $green: #00bc8f;
   background-color: #fffcf3;
   display: flex;
   justify-content: center;
+}
+
+#body {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 1px 1px, #e9ddcb 2px, transparent 1px);
+    background-size: clamp(80px, 10vw, 150px)  clamp(80px, 10vw, 150px);
+    background-repeat: repeat;
+    pointer-events: none;
+  }
 }
 
 //#endregion
