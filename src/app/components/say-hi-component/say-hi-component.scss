@@ -7,7 +7,7 @@
 #arrow-wrapper {
   @include all.flexi($jc: center);
   padding-bottom: 40px;
-  background: linear-gradient(185deg, #fffcf3 0%, #fffcf3 75%, black 50%, black 100%);
+  background: linear-gradient(184deg, transparent 0%, transparent 75%, black 50%, black 100%);
 }
 
 #arrow {

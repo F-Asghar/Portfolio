@@ -26,6 +26,7 @@ section {
       width: clamp(250px, 60dvw, 800px);
       position: absolute;
       top: -75px;
+      background-color: #fffcf3;
       @include all.flexi($jc: center);
     }
 
