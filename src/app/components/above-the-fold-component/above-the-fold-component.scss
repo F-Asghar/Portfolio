@@ -1,7 +1,5 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-
-
 section {
   width: 100%;
   @include all.flexi($fd: column, $ai: center, $jc: center);

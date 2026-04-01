@@ -43,7 +43,7 @@ nav {
       font-size: clamp(16px, 5vw, 20px);
 
       // Hover-Unterstrich nur, wenn nicht fokussiert
-      &:not(:focus):hover::after {
+      &:not(.active):hover::after {
         content: '';
         width: 75%;
         height: 2px;
@@ -53,7 +53,7 @@ nav {
         bottom: -3px;
       }
 
-      &:focus {
+      &.active {
         outline: 2px solid all.$green;
         outline-offset: 2px;
       }

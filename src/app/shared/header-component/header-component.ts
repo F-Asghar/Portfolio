@@ -9,6 +9,7 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 })
 export class HeaderComponent {
   isOpen = false;
+  currentLanguage: string = 'de';
 
   navClick(): void {
     this.isOpen = !this.isOpen;
@@ -43,5 +44,6 @@ export class HeaderComponent {
 
   useLanguage(language: string): void {
     this.translate.use(language);
+    this.currentLanguage = language;
   }
 }

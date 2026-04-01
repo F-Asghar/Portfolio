@@ -1,21 +1,7 @@
 @use '../../../../public/assets/styles/all-styles.scss' as all;
 
-.background {
+.structure {
   background-color: black;
-  // overflow-x: hidden;
-
-  // &::before {
-  //   overflow: hidden;
-  //   position: absolute;
-  //   content: '';
-  //   width: 110%;
-  //   height: 200px;
-  //   transform: rotate(4deg);
-  //   top: -120px;
-  //   left: -10%;
-  //   right: 0;
-  //   background-color: black;
-  // }
 }
 
 #arrow-wrapper {

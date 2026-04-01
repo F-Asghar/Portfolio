@@ -6,8 +6,8 @@
       </div>
 
       <div id="language">
-        <button (click)="useLanguage('de')">DE</button>
-        <button (click)="useLanguage('en')">EN</button>
+        <button (click)="useLanguage('de')" [class.active]="currentLanguage === 'de'">DE</button>
+        <button (click)="useLanguage('en')" [class.active]="currentLanguage === 'en'">EN</button>
       </div>
 
       <section id="burger-menu">
