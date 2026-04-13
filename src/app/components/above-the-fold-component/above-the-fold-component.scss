@@ -2,8 +2,9 @@
 
 section {
   width: 100%;
-  @include all.flexi($fd: column, $ai: center, $jc: center);
+  @include all.flexi($fd: column);
   max-width: 1440px;
+  height: 85dvh;
 
   #head-line {
     width: 80%;
@@ -12,7 +13,7 @@ section {
 
   #name {
     @include all.flexi($ai: center, $gap: 16px);
-
+    margin-bottom: 80px;
     #underline {
       width: clamp(10px, 39vw, 700px);
       height: 3px;
@@ -75,7 +76,7 @@ section {
   }
 
   section #name > h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 

@@ -153,7 +153,6 @@ section {
       .portfolio-content {
         width: 100%;
         height: 100%;
-        // display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -217,6 +216,7 @@ section {
         width: 100%;
         height: 100%;
         border: none;
+        // display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -233,6 +233,12 @@ section {
         }
       }
     }
+  }
+
+  .project {
+    font-family: 'Syne Variable', sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 5dvw, 48px);
   }
 }
 
