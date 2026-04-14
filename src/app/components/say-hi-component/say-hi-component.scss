@@ -192,14 +192,14 @@ section {
         z-index: 10;
       }
 
-      #check-box-wrapper {
+      #button-wrapper {
         @include all.flexi();
+        margin-top: 24px;
       }
 
       #check-box {
         width: 100%;
-        margin-bottom: 24px;
-        @include all.flexi($jc: flex-start, $gap: 16px);
+        @include all.flexi($ai:center, $gap: 16px);
 
         input{
           align-self: start;
