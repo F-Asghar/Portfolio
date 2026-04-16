@@ -11,7 +11,6 @@
       </div>
 
       <div class="skill-icon">
-        <!-- <div class="overflow-hidden"> -->
         <img
           class="loopImage"
           [class.is-animating]="isAnimAngular"
@@ -20,96 +19,98 @@
           src="assets/icons/angular.png"
           alt="Angular-Icon"
         />
-        <!-- </div> -->
+
         <p>Angular</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimTs"
           (mouseenter)="isAnimTs = true"
           (animationend)="isAnimTs = false"
-          src="assets/icons/typescript.png" 
-          alt="TypeScript-Icon" 
+          src="assets/icons/typescript.png"
+          alt="TypeScript-Icon"
         />
         <p>TypeScript</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimJs"
           (mouseenter)="isAnimJs = true"
           (animationend)="isAnimJs = false"
-          src="assets/icons/javascript.png" 
-          alt="JavaScript-Icon" 
+          src="assets/icons/javascript.png"
+          alt="JavaScript-Icon"
         />
         <p>JavaScript</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimHtml"
           (mouseenter)="isAnimHtml = true"
           (animationend)="isAnimHtml = false"
-          src="assets/icons/html.png" 
-          alt="HTML-Icon" 
+          src="assets/icons/html.png"
+          alt="HTML-Icon"
         />
         <p>HTML</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimCss"
           (mouseenter)="isAnimCss = true"
           (animationend)="isAnimCss = false"
-          src="assets/icons/css.png" 
-          alt="Css-Icon" 
+          src="assets/icons/css.png"
+          alt="Css-Icon"
         />
         <p>CSS</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimGit"
           (mouseenter)="isAnimGit = true"
           (animationend)="isAnimGit = false"
-          src="assets/icons/git.png" 
-          alt="Git-Icon" 
+          src="assets/icons/git.png"
+          alt="Git-Icon"
         />
         <p>Git</p>
       </div>
 
       <div class="skill-icon">
-        <img 
-          class="loopImage" 
+        <img
+          class="loopImage"
           [class.is-animating]="isAnimRest"
           (mouseenter)="isAnimRest = true"
           (animationend)="isAnimRest = false"
-          src="assets/icons/rest-api.png" 
-          alt="Rest-Api-Icon" 
+          src="assets/icons/rest-api.png"
+          alt="Rest-Api-Icon"
         />
         <p>REST-API</p>
       </div>
 
       <div id="education">
         <div id="education-wraper">
-          <img 
-            class="loopImage" 
+          <img
+            class="loopImage"
             [class.is-animating]="isAnimEdu"
             (mouseenter)="isAnimEdu = true"
             (animationend)="isAnimEdu = false"
-            src="assets/icons/education.png" 
-            alt="Rest-Api-Icon" 
+            src="assets/icons/education.png"
+            alt="Rest-Api-Icon"
           />
         </div>
         <p>
           {{ 'my-skills.description-one' | translate }}
-          <a class="slide-underline" href="#say-hi" id="contact-me">{{ 'my-skills.contact-me' | translate }}</a>
+          <a class="slide-underline" href="#say-hi" id="contact-me">{{
+            'my-skills.contact-me' | translate
+          }}</a>
           {{ 'my-skills.description-two' | translate }}
         </p>
       </div>

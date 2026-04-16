@@ -42,13 +42,10 @@ section {
         color: all.$green;
       }
 
-      // .overflow-hidden {
-      // overflow: hidden;
       > img {
         width: clamp(30px, 8vw, 100px);
         height: clamp(30px, 8vw, 100px);
       }
-      // }
 
       > p {
         z-index: 10;
@@ -94,8 +91,6 @@ section {
     }
   }
 }
-
-
 
 //#region Mediaquerries
 

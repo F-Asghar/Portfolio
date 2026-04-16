@@ -43,7 +43,6 @@ nav {
       border-style: none;
       font-size: clamp(16px, 5vw, 20px);
 
-      // Hover-Unterstrich nur, wenn nicht fokussiert
       &:not(.active):hover::after {
         content: '';
         width: 75%;

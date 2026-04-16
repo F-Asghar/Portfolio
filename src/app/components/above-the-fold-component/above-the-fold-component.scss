@@ -53,6 +53,7 @@ section {
 }
 
 // #region mediaquerrys
+
 @include all.notebook {
     section #name > h3 {
     font-size: 36px;

@@ -1,7 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  NgForm,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Router } from '@angular/router';
@@ -14,18 +21,54 @@ import { Router } from '@angular/router';
   styleUrl: './say-hi-component.scss',
 })
 export class SayHiComponent {
+  http = inject(HttpClient);
+  successMessage = false;
 
-constructor(private router: Router) {}
+  constructor(private router: Router) {}
+
+  /**
+   * Navigates to the privacy policy page and scrolls to the top of the window.
+   */
   goToPrivacyPolicy() {
     this.router.navigate(['/privacy-policy']).then(() => {
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     });
   }
 
-  http = inject(HttpClient);
+  /**
+   * Form group definition with validation rules for name, email, message, and privacy policy.
+   */
+  userForm = new FormGroup({
+    name: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    email: new FormControl('', {
+      validators: [
+        Validators.required,
+        Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/),
+      ],
+    }),
+    message: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(4)],
+    }),
+    privacyPolicy: new FormControl(false, {
+      validators: [Validators.requiredTrue],
+    }),
+  });
 
-  successMessage = false; 
+  /**
+   * Submits the form if it is valid, shows a success message, and resets the fields.
+   */
+  formSubmit() {
+    if (this.userForm.valid) {
+      this.showSuccess();
+      this.userForm.reset();
+    }
+  }
 
+  /**
+   * Displays a success message temporarily for 3 seconds.
+   */
   showSuccess = () => {
     this.successMessage = true;
     setTimeout(() => {
@@ -33,35 +76,12 @@ constructor(private router: Router) {}
     }, 3000);
   };
 
-
-    userForm = new FormGroup(
-    {
-      name: new FormControl('', {
-        validators: [Validators.required]
-      }),
-      email: new FormControl('', {
-        validators: [Validators.required, Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)],
-      }),
-      message: new FormControl('', {
-        validators: [Validators.required, Validators.minLength(4)]
-      }),
-      privacyPolicy: new FormControl(false, { 
-        validators: [Validators.requiredTrue]
-      }),
-    },);
-
-
-    formSubmit() {
-    if(this.userForm.valid){
-      this.showSuccess();
-      this.userForm.reset();
-    }
-  }
-
-    handleDisabledClick() {
+  /**
+   * Marks all form fields as touched to trigger validation error messages if the form is invalid.
+   */
+  handleDisabledClick() {
     if (this.userForm.invalid) {
       this.userForm.markAllAsTouched();
     }
   }
 }
-

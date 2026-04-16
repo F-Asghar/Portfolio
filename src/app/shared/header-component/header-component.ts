@@ -10,16 +10,25 @@ import { TranslatePipe, TranslateDirective, TranslateService } from '@ngx-transl
 export class HeaderComponent {
   isOpen = false;
   currentLanguage: string = 'de';
+  private translate = inject(TranslateService);
 
+  /**
+   * Toggles the menu state and updates the dialog visibility.
+   */
   navClick(): void {
     this.isOpen = !this.isOpen;
     this.toggleDialog();
   }
 
+  /**
+   * Manages the visibility of the menu dialog and handles associated UI adjustments
+   * such as body scrolling and language selector visibility.
+   */
   toggleDialog() {
     const dialogRef = document.getElementById('dialog-menu') as HTMLDialogElement;
     const languageDiv = document.getElementById('language');
     const bodyRef = document.getElementById('body');
+
     if (dialogRef.open) {
       dialogRef.close();
       this.isOpen = false;
@@ -40,8 +49,10 @@ export class HeaderComponent {
     }
   }
 
-  private translate = inject(TranslateService);
-
+  /**
+   * Switches the application's translation language and updates the current language state.
+   * @param language The language code to be used (e.g., 'en', 'de').
+   */
   useLanguage(language: string): void {
     this.translate.use(language);
     this.currentLanguage = language;

@@ -118,8 +118,8 @@ section {
           color: transparent;
           pointer-events: none;
           &.invalid {
-            color: red; /* Nur wenn die Bedingung oben im HTML wahr ist */
-          }          
+            color: red;
+          }
         }
       }
 
@@ -160,7 +160,6 @@ section {
         padding-right: 50px;
 
         &:-webkit-autofill {
-          /* Verhindert den Farbwechsel, indem die Transition unendlich verzögert wird */
           transition:
             background-color 600000s ease-in-out 0s,
             color 600000s ease-in-out 0s;
@@ -181,7 +180,7 @@ section {
       }
 
       .label {
-        display: none; // hier
+        display: none;
         position: absolute;
         width: fit-content;
         height: 16px;
@@ -199,9 +198,9 @@ section {
 
       #check-box {
         width: 100%;
-        @include all.flexi($ai:center, $gap: 16px);
+        @include all.flexi($ai: center, $gap: 16px);
 
-        input{
+        input {
           align-self: start;
         }
         p {

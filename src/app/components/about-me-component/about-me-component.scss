@@ -7,11 +7,10 @@ section {
   max-width: 1440px;
 
   #content-wrapper {
-    // height: 400px;
-    display: flex; // CHANGED: flexbox aktiviert
-    gap: 24px; // CHANGED: Lücke zwischen Spalten
-    align-items: stretch; // CHANGED: beide Spalten gleiche Höhe
-    width: 100%; // auch eingefügt
+    display: flex; 
+    gap: 24px; 
+    align-items: stretch; 
+    width: 100%; 
   }
 
   > h2 {
@@ -27,10 +26,9 @@ section {
     @include all.flexi($gap: 24px);
 
     > div {
-      flex: 1; // CHANGED: beide Spalten nehmen gleiche Breite
-      display: flex; // CHANGED: für flex-direction
-      flex-direction: column; // CHANGED: damit #about-me Column Layout hat
-      // height: inherit; // CHANGED: entfernt, passt sich jetzt flex/stretch an
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
     }
 
     #about-me-description {
