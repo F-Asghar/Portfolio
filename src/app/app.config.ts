@@ -15,7 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideHttpClient(),
-    provideHttpClient(),
     provideTranslateService({
       lang: 'en',
       fallbackLang: 'en',

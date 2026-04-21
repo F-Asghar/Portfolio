@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Location } from '@angular/common';
@@ -18,5 +18,14 @@ export class LegalNoticeComponent {
    */
   goBack() {
     this.location.back();
+  }
+
+  /**
+   * Resets the scroll position to the top of the page when the component is initialized.
+   * This ensures that the user starts at the beginning of the content when navigating
+   * to this view.
+   */
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 }
